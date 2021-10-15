@@ -13,6 +13,7 @@ Parameters:
   AZ:
     Description: Input a AZ where Public Subnet will be created.
     Type: AWS::EC2::AvailabilityZone::Name
+    Default: ap-northeast-1a
   PublicSubnetCidrBlock:
     Description: Input a Public Subnet IPv4 CidrBlock.
     Type: String
