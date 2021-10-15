@@ -1,36 +1,38 @@
 Parameters:
 # VPC
   VpcCidrBlock:
-    Description: Input a VPC IPv4 CidrBlock. ex) 192.168.2.0/24
+    Description: Input a VPC IPv4 CidrBlock.
     Type: String
+    Default: "10.0.0.0/16"
   VpcName:
     Description: Input a VPC name. This Parameter will be a Name tag.
     Type: String
-    Default: ""
+    Default: "test-vpc"
 
 # Public Subnet
   AZ:
     Description: Input a AZ where Public Subnet will be created.
     Type: AWS::EC2::AvailabilityZone::Name
   PublicSubnetCidrBlock:
-    Description: Input a Public Subnet IPv4 CidrBlock.  ex) 192.168.2.0/25
+    Description: Input a Public Subnet IPv4 CidrBlock.
     Type: String
+    Default: "10.0.0.0/16"
   PublicSubnetName:
     Description: Input a Public Subnet name. This Parameter will be a Name tag.
     Type: String
-    Default: ""
+    Default: "test-subnet-public"
 
 # Internet GW
   InternetGwName:
     Description: Input a IntenetGW name. This Parameter will be a Name tag.
     Type: String
-    Default: ""
+    Default: "test-igw-001"
 
 # RouteTable for Public Subnet
   RouteTableName:
     Description: Input a RouteTable name. This Parameter will be a Name tag.
     Type: String
-    Default: ""
+    Default: "test-rtb-001"
 
 
 Resources:
