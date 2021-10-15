@@ -1,0 +1,26 @@
+################
+# Prerequisites
+################
+# VPC、パブリックサブネット、インターネットゲートウェイが作成済み
+# EC2はパブリックサブネットにデプロイされていること
+# SSH、HTTPでEC2インスタンスへアクセスできるようにセキュリティグループが設定されていること
+
+################
+# procedure
+################
+# SSH接続後にec2-user からroot へユーザ切替
+sudo su - root
+# 最新状態へアップデータ
+yum -y update
+# httpdパッケージ確認
+yum info httpd
+# Apacheのインストール
+yum -y install httpd
+# Apacheの起動
+systemctl start httpd
+# EC2が再起動した際にApacheも自動起動するように設定
+systemctl enable httpd
+# Apacheが起動したか確認
+systemctl status httpd
+
+# EC2インスタンスのIPアドレスをブラウザで開き、HTTP通信ができていることを確認
