@@ -25,7 +25,7 @@ systemctl enable httpd
 
 # HTMLファイルを格納する場所(/var/www/html)へ移動
 cd /var/www/html
-# HTMLファイル(ファイル名＝index.html)の中身を記述
+# HTMLファイル(ファイル名＝index.html)の中身を記述　<https://github.com/tsunau/AWS/blob/public/bukai_20211022/html/index.html>
 vi index.html
 # 作成したindex.htmlがちゃんとあるか確認
 ls -l
